@@ -109,6 +109,12 @@ class WizStockBarcodesReadPicking(models.TransientModel):
         self.determine_todo_action()
         self.fill_pending_moves()
 
+    def action_confirm(self):
+        res = super().action_confirm()
+        if not self.todo_line_ids:
+            self.fill_todo_records()
+        return res
+
     def get_sorted_move_lines(self, move_lines):
         if self.picking_id.picking_type_code in ["incoming", "internal"]:
             location_field = "location_dest_id"
