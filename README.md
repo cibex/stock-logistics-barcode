@@ -17,7 +17,11 @@ stock-logistics-barcode
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[product_multi_barcode](product_multi_barcode/) | 18.0.1.0.0 |  | Multiple barcodes on products
 
 [//]: # (end addons)
 
